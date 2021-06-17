@@ -1,4 +1,4 @@
-// Basic
+// modal/overlay JS
 
 const openModalButtons = document.querySelectorAll('[data-modal-target]')
 const closeModalButtons = document.querySelectorAll('[data-close-button]')
@@ -55,4 +55,37 @@ function closeModal(modal) {
     overlay.classList.remove('active')
     overlay2.classList.remove('active')
     overlay3.classList.remove('active')
+}
+
+//modal thumbnail image JS
+//basic image slider function
+
+let basic_img = document.getElementById('basic_image');
+let b_images = [
+    Basic/dragon.jpg,
+    Basic/eagle.jpg,
+    Basic/heart.jpg,
+    Basic/mother.jpg,
+    Basic/panther.jpg,
+    Basic/rose.jpg,
+    Basic/ship.jpg,
+    Basic/skull.jpg,
+    Basic/swallow.jpg
+]
+let i = 0;
+
+function prev() {
+    if(i <= 0) i = b_images.length;
+    i--;
+    return setImg();
+}
+
+function next() {
+    if(i >= b_images.length-1) i=-1;
+    i++;
+    return setImg();
+}
+
+function setImg() {
+    return basic_img.setAttribute('src', 'tattoo_images/' + b_images[i])
 }

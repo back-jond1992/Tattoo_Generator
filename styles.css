@@ -1,3 +1,5 @@
+/* initial page styling */
+
 body {
     background-color: pink;
 }
@@ -48,7 +50,9 @@ body {
     -moz-box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
     box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
 }
-  
+
+/* modal/overlay styling */
+
 .modal {
     position: fixed;
     top: 50%;
@@ -92,6 +96,13 @@ body {
 .modal-body {
     padding: 10px 15px;
 }
+
+.modal-thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
 
 #overlay {
     position: fixed;
@@ -143,3 +154,30 @@ body {
     opacity: 1;
     pointer-events: all;
 }
+
+/* previous/next button styling */
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 16px;
+  }
+  
+  a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .previous {
+    background-color: #f1f1f1;
+    color: black;
+  }
+  
+  .next {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  .round {
+    border-radius: 50%;
+  }
