@@ -70,7 +70,9 @@ let basicFlashImages = [
     'rose.jpg',
     'ship.jpg',
     'skull.jpg',
-    'swallow.jpg'
+    'swallow.jpg',
+    'good_luck.jpg',
+    'grim_reaper'
 ]
 
 let i = 0;
@@ -98,7 +100,12 @@ let intermediateFlashImages = [
     'jesus.jpg',
     'mans_ruin.jpg',
     'pharoahs_horses.jpg',
-    'rose_of_no_mans_land.jpg'
+    'rose_of_no_mans_land.jpg',
+    'tiger_and_snake.jpg',
+    'virgin_mary.jpg',
+    'butterfly_lady.jpg',
+    'snake_and_eagle.jpg',
+    'sacred_heart.jpg'
 ]
 
 let j = 0;
