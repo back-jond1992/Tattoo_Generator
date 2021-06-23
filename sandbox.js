@@ -72,7 +72,11 @@ let basicFlashImages = [
     'skull.jpg',
     'swallow.jpg',
     'good_luck.jpg',
-    'grim_reaper'
+    'grim_reaper.jpg',
+    'snakes.jpg',
+    'butterfly.jpg',
+    'wolf.jpg',
+    'girls.jpg'
 ]
 
 let i = 0;
@@ -93,6 +97,19 @@ function setImg() {
     return basic_img.setAttribute('src', 'tattoo_images/' + 'Basic/' + basicFlashImages[i])
 }
 
+let caption = document.getElementsByTagName("p")[0]
+
+switch(basicFlashImages) {
+    case 1: 
+        caption.innerHTML = "Hot stuff!"
+        break;
+    case 2:
+        caption.innerHTML = "eagle"
+        break;
+}
+
+
+
 //intermediate image slider function
 
 let intermediate_img = document.querySelector('#intermediateFlashImage');
@@ -105,7 +122,13 @@ let intermediateFlashImages = [
     'virgin_mary.jpg',
     'butterfly_lady.jpg',
     'snake_and_eagle.jpg',
-    'sacred_heart.jpg'
+    'sacred_heart.jpg',
+    'mermaid.jpg',
+    'true_love.jpg',
+    'pinup.jpg',
+    'battle_royale.jpg',
+    'crucifiction.jpg',
+    'rock_of_ages.jpg',
 ]
 
 let j = 0;
@@ -130,9 +153,17 @@ function setImg2() {
 
 let badass_img = document.querySelector('#badassFlashImage');
 let badassFlashImages = [
-    'battle_royale.jpg',
-    'crucifiction.jpg',
-    'rock_of_ages.jpg'
+    'last_port.jpg',
+    'lady_bodysuit.jpg',
+    'front_piece.jpg',
+    'full_back.jpg',
+    'sundance.jpg',
+    'old.jpg',
+    'jaboc.jpg',
+    'simple.jpg',
+    'devil.jpg',
+    'front_lady.jpg',
+    'marvin.jpb'
 ]
 
 let k = 0;
@@ -152,3 +183,4 @@ function next3() {
 function setImg3() {
     return badass_img.setAttribute('src', 'tattoo_images/' + 'Badass/' + badassFlashImages[k])
 }
+
