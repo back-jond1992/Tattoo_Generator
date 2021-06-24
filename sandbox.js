@@ -61,6 +61,8 @@ function closeModal(modal) {
 //basic image slider function
 
 let basic_img = document.querySelector('#basicFlashImage');
+let basic_cptn = document.getElementById('basicCaption');
+
 let basicFlashImages = [
     'dragon.jpg',
     'eagle.jpg',
@@ -79,40 +81,54 @@ let basicFlashImages = [
     'girls.jpg'
 ]
 
+let basicCaptions = [
+    'Dragon, hot stuff!',
+    'The eagle has landed.',
+    'Big love.',
+    'I love you mum!',
+    "Panther? Don't mind if do!",
+    'Kiss from a rose.',
+    'Ahoy sailor.',
+    'Yes please!',
+    'Simple but beautiful.',
+    'Good luck bro!',
+    'Gruesome!',
+    'Elongated, limbless, carnivorous reptiles.',
+    'Lovely.',
+    'Oooooooooooooooowhoo!!!',
+    'Girls, girls, girls!'
+]
+
 let i = 0;
 
 function prev() {
     if(i <= 0) i = basicFlashImages.length;
     i--;
-    return setImg();
+    if(i <= 0) i = basicCaptions.length;
+    return setImg(), setCptn();
 }
 
 function next() {
     if(i >= basicFlashImages.length - 1) i = -1;
     i++;
-    return setImg();
+    if(i >= basicCaptions.length - 1) i = -1;
+    return setImg(), setCptn();
 }
 
 function setImg() {
     return basic_img.setAttribute('src', 'tattoo_images/' + 'Basic/' + basicFlashImages[i])
 }
 
-let caption = document.getElementsByTagName("p")[0]
-
-switch(basicFlashImages) {
-    case 1: 
-        caption.innerHTML = "Hot stuff!"
-        break;
-    case 2:
-        caption.innerHTML = "eagle"
-        break;
+function setCptn() {
+    return basic_cptn.innerHTML = basicCaptions[i];
 }
-
 
 
 //intermediate image slider function
 
 let intermediate_img = document.querySelector('#intermediateFlashImage');
+let intermediate_cptn = document.getElementById('intermediateCaption');
+
 let intermediateFlashImages = [
     'jesus.jpg',
     'mans_ruin.jpg',
@@ -131,25 +147,49 @@ let intermediateFlashImages = [
     'rock_of_ages.jpg',
 ]
 
+let intermediateCaptions = [
+    'Our lord and saviour.',
+    'Ruined me, ruin you too.',
+    'A reflection of the human spirit.',
+    'La rose sous le boulets.',
+    'What a combo!',
+    'Mother of god, Blessed Mother, Madonna, Our Lady.',
+    'Would look great on your chest...',
+    'Who will? Snake or Eagle?',
+    'The most sacred heart of Jesus.',
+    'Sailors beware!',
+    'True love will find you in the end.',
+    'Sorry mum.',
+    "Wouldn't want to get in the way of that battle.",
+    "Jesus died for somebody's sins but not mine.",
+    'Rock of Ages.'
+]
+
 let j = 0;
 
 function prev2() {
     if(j <= 0) j = intermediateFlashImages.length;
     j--;
-    return setImg2();
+    if(j <= 0) j = intermediateCaptions.length;
+    return setImg2(), setCptn2();
 }
 
 function next2() {
     if(j >= intermediateFlashImages.length - 1) j = -1;
     j++;
-    return setImg2();
+    if(j >= intermediateCaptions.length - 1) j = -1;
+    return setImg2(), setCptn2();
 }
 
 function setImg2() {
     return intermediate_img.setAttribute('src', 'tattoo_images/' + 'Intermediate/' + intermediateFlashImages[j])
 }
 
-//intermediate image slider function
+function setCptn2() {
+    return intermediate_cptn.innerHTML = intermediateCaptions[j];
+}
+
+//badass image slider function
 
 let badass_img = document.querySelector('#badassFlashImage');
 let badassFlashImages = [
