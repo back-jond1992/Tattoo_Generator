@@ -109,9 +109,9 @@ function prev() {
 }
 
 function next() {
-    if(i >= basicFlashImages.length - 1) i = -1;
+    if(i >= basicFlashImages.length) i = 0;
     i++;
-    if(i >= basicCaptions.length - 1) i = -1;
+    if(i >= basicCaptions.length ) i = 0;
     return setImg(), setCptn();
 }
 
@@ -145,6 +145,7 @@ let intermediateFlashImages = [
     'battle_royale.jpg',
     'crucifiction.jpg',
     'rock_of_ages.jpg',
+    'sundance.jpg'
 ]
 
 let intermediateCaptions = [
@@ -162,7 +163,8 @@ let intermediateCaptions = [
     'Sorry mum.',
     "Wouldn't want to get in the way of that battle.",
     "Jesus died for somebody's sins but not mine.",
-    'Rock of Ages.'
+    'Rock of Ages.',
+    'Dancing for some sun.'
 ]
 
 let j = 0;
@@ -175,9 +177,9 @@ function prev2() {
 }
 
 function next2() {
-    if(j >= intermediateFlashImages.length - 1) j = -1;
+    if(j >= intermediateFlashImages.length) j = 0;
     j++;
-    if(j >= intermediateCaptions.length - 1) j = -1;
+    if(j >= intermediateCaptions.length) j = 0;
     return setImg2(), setCptn2();
 }
 
@@ -192,18 +194,30 @@ function setCptn2() {
 //badass image slider function
 
 let badass_img = document.querySelector('#badassFlashImage');
+let badass_cptn = document.getElementById('badassCaption');
+
 let badassFlashImages = [
-    'last_port.jpg',
     'lady_bodysuit.jpg',
     'front_piece.jpg',
     'full_back.jpg',
-    'sundance.jpg',
     'old.jpg',
     'jaboc.jpg',
     'simple.jpg',
     'devil.jpg',
     'front_lady.jpg',
-    'marvin.jpb'
+    'marvin.jpg'
+]
+
+let badassCaptions = [
+    "Now we're talking!",
+    'Take me now.',
+    'This is art.',
+    'The moustache is a must.',
+    'Naughty... but I like it.',
+    'Simple. Pleasing on the eye.',
+    'Bad to the bone.',
+    'Tattoos are forever.',
+    'Im walking on sunshine.'
 ]
 
 let k = 0;
@@ -211,16 +225,21 @@ let k = 0;
 function prev3() {
     if(k <= 0) k = badassFlashImages.length;
     k--;
-    return setImg3();
+    if(k <= 0) k = badassCaptions.length
+    return setImg3(), setCptn3();
 }
 
 function next3() {
-    if(k >= badassFlashImages.length - 1) k = -1;
+    if(k >= badassFlashImages.length) k = 0;
     k++;
-    return setImg3();
+    if(k >= badassCaptions.length) k = 0;
+    return setImg3(), setCptn3();
 }
 
 function setImg3() {
     return badass_img.setAttribute('src', 'tattoo_images/' + 'Badass/' + badassFlashImages[k])
 }
 
+function setCptn3() {
+    return badass_cptn.innerHTML = badassCaptions[k];
+}
