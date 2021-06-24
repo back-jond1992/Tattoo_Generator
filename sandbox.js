@@ -156,7 +156,7 @@ let intermediateCaptions = [
     'What a combo!',
     'Mother of god, Blessed Mother, Madonna, Our Lady.',
     'Would look great on your chest...',
-    'Who will? Snake or Eagle?',
+    'Who will win? Snake or Eagle?',
     'The most sacred heart of Jesus.',
     'Sailors beware!',
     'True love will find you in the end.',
